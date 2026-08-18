@@ -1,0 +1,220 @@
+:root {
+    --header-bg: #f15a24;        /* Laranja vibrante do topo */
+    --bg-body: #f4eee8;         /* Fundo da página tom areia claro */
+    --card-bg: #ece5dd;         /* Fundo dos cards tom creme */
+    --primary-red: #e53935;     /* Vermelho dos títulos e preços */
+    --text-dark: #2c2c2c;       /* Cor do texto principal */
+    --whatsapp-green: #00b900;  /* Verde do botão WhatsApp */
+    --whatsapp-hover: #008f00;
+    --counter-bg: #e2d9cf;      /* Fundo suave dos contadores */
+    --radius-card: 16px;
+    --radius-pill: 50px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    line-height: 1.5;
+    padding-bottom: 120px;
+}
+
+/* Cabeçalho */
+.hero {
+    background-color: var(--header-bg);
+    color: white;
+    padding: 45px 20px 65px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.hero p {
+    font-size: 0.95rem;
+    opacity: 0.95;
+    margin-bottom: 15px;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--whatsapp-green);
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.contact-btn:hover {
+    background-color: var(--whatsapp-hover);
+}
+
+/* Container & Grid */
+.container {
+    max-width: 1200px;
+    margin: -35px auto 0 auto;
+    padding: 0 20px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+/* Cards */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius-card);
+    padding: 20px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-red);
+}
+
+.price-badge {
+    color: var(--primary-red);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+/* Lista de Itens */
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+.item-row span {
+    color: var(--text-dark);
+}
+
+.item-row small {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* Contadores (+ 0 -) */
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--counter-bg);
+    border-radius: 20px;
+    padding: 2px 8px;
+    min-width: 75px;
+}
+
+.counter button {
+    background: transparent;
+    color: var(--primary-red);
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.counter button:hover {
+    opacity: 0.7;
+}
+
+.qty {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    text-align: center;
+    min-width: 16px;
+}
+
+/* Barra Fixa de Total */
+.total-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 550px;
+    background: var(--card-bg);
+    border-radius: var(--radius-pill);
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+
+.total-bar span {
+    font-size: 0.85rem;
+    color: #555;
+    display: block;
+}
+
+.total-bar strong {
+    font-size: 1.25rem;
+    color: var(--primary-red);
+    font-weight: 700;
+}
+
+#send-order-btn {
+    background-color: var(--whatsapp-green);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s ease;
+}
+
+#send-order-btn:hover {
+    background-color: var(--whatsapp-hover);
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 0.8rem;
+}
